@@ -1,0 +1,41 @@
+.w-md-editor, .wmde-markdown {
+    background-color: transparent !important;
+    --md-editor-background-color: transparent !important;
+}
+
+[data-name=fullscreen] {
+    display: none;
+}
+
+
+[role=img] {
+    transform: scale(1.5);
+}
+
+.w-md-editor-toolbar {
+    padding: 4px !important;
+}
+
+.w-md-editor-toolbar>ul>li {
+    margin-right: 4px !important;
+    margin-left: 4px !important;
+}
+
+[data-color-mode=dark], [data-color-mode=light], .w-md-editor {
+    height: 100% !important;
+}
+
+.w-md-editor {
+    height: 100% !important;
+    max-height: 100% !important;
+}
+
+.w-md-editor-show-edit>.w-md-editor-content>.w-md-editor-area {
+    width: 100%;
+    overflow: auto;
+    position: absolute;
+}
+
+.w-md-editor-content {
+    position: absolute;
+}

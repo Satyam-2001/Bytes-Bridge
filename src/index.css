@@ -21,7 +21,7 @@ code {
 ::-webkit-scrollbar {
   width: 0.4rem;
   height: 0.4rem;
-  border-radius: 0.2rem;
+  border-radius: 0.1rem;
   background: transparent;
 
 }
@@ -29,20 +29,20 @@ code {
 /* Track */
 ::-webkit-scrollbar-track {
   background: transparent;
-  border-radius: 0.2rem;
+  border-radius: 0.1rem;
 
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(150, 150, 150, 0.7);
-  border-radius: 0.2rem;
+  background: rgba(150, 150, 150, 0.9);
+  border-radius: 0.1rem;
 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: rgba(150, 150, 150, 0.7);
 }
 
 .prevent-select {
@@ -62,8 +62,63 @@ code {
   width: 100%;
 }
 
-.cm-theme {
-  /* font-size: 10px; */
-  /* word-break: break-all; */
-  word-break: keep-all;
+.sample-drag-bar {
+  flex-shrink: 0;
+  width: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  cursor: col-resize;
+  transition: background-color 0.15s 0.15s ease-in-out;
 }
+
+.sample-drag-bar:hover {
+  background-color: #1890ff;
+}
+
+.react-swipeable-view-container {
+  height: 100% !important;
+}
+
+.swippe-box>div {
+  height: 100%;
+}
+
+/* .rc-md-editor .rc-md-navigation {
+  background-color: transparent !important;
+  color: white;
+}
+
+.rc-md-editor .editor-container .sec-md .input {
+  background-color: transparent !important;
+  color: var(--mui-palette-primary-main) !important;
+  font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+} */
+
+/* .dark_editor {
+  --jd-color-background-default: #417505;
+  --jd-color-border: #474025;
+  --jd-color-panel: #5fd3a2;
+  --jd-color-icon: #8b572a;
+} */
+/* 
+.jodit_theme_dark {
+  background-color: var(--mui-palette-primary-main) !important;
+} */
+
+/* .jodit-container, .jodit-wysiwyg, .jodit-workplace {
+  background-color: transparent !important;
+}
+
+.jodit_theme_dark > .jodit-toolbar__box {
+  background-color: #1a1c1e !important;
+  z-index: 10000000 !important;
+}
+
+.jodit-status-bar {
+  display: none !important;
+} */

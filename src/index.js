@@ -1,28 +1,16 @@
 import React from 'react'
-import ReactDOM, { createRoot } from 'react-dom/client'
-import App from './App.js'
+import { createRoot } from 'react-dom/client'
+import { RouterProvider } from 'react-router-dom';
+import router from './routes'
+import { ColorModeProvider } from "./theme";
+import { AuthProvider } from './context/AuthProvider';
+
 import './index.css'
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
-import RootLayout from './RootLayout.js';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <RootLayout />,
-    children: [{
-      path: "/",
-      element: <App />,
-    },
-    ],
-  },
-]);
-
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <AuthProvider>
+    <ColorModeProvider>
+      <RouterProvider router={router} />
+    </ColorModeProvider>
+  </AuthProvider>
 );
